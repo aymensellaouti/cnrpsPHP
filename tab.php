@@ -17,7 +17,7 @@
     <table border='2'>
     <tr>
         <th>Caractère</th>
-        <th>Nombre d'occurences</th>
+        <th>Nombre d'Occurences</th>
     </tr>
     <?php
     $chaine = "Bonjour Cnrps pour le formation PHP Symfony";
