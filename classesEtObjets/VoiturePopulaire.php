@@ -1,7 +1,8 @@
+
 <?php
+include 'Vehicule.php';
 
-
-class VoiturePopulaire extends Voiture
+class VoiturePopulaire extends VoitureAbstraite implements Vehicule
 {
     private $options;
     public function tableauDeBord()
@@ -26,4 +27,24 @@ class VoiturePopulaire extends Voiture
         $this->options = $options;
     }
 
+    public function reglageMoteur()
+    {
+        echo 'Ok moteur réglé';
+    }
+
+    public function demarrer()
+    {
+        // TODO: Implement demarrer() method.
+    }
+
+    public function arreter()
+    {
+        // TODO: Implement arreter() method.
+    }
+
+    public function accelert()
+    {
+        $this->vitesse += 25;
+        // TODO: Implement accelert() method.
+    }
 }

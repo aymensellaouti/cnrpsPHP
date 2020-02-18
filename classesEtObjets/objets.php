@@ -1,6 +1,8 @@
 <?php
-include 'Voiture.php';
-include 'VoiturePopulaire.php';
+include 'autoload.php';
+//include 'VoitureAbstraite.php';
+//include 'VoiturePopulaire.php';
+//include 'Personne.php';
 //
 //include 'Personne.php';
 //Personne::getNbreInstance();
@@ -25,10 +27,12 @@ include 'VoiturePopulaire.php';
 ////$aymen->quiAlePlusGrandNumero($sonia2);
 ////
 
-$fiesta =  new Voiture('1234', 4, 'bleu', 160);
-$fakeCar =  new Voiture();
+//$fiesta =  new VoitureAbstraite('1234', 4, 'bleu', 160);
+//$fakeCar =  new Voiture();
 $yaris = new VoiturePopulaire();
 $yaris->setOptions('Airbag et parc assist');
 $yaris->tableauDeBord();
-$fakeCar->tableauDeBord();
-$fiesta->tableauDeBord();
+$aymen = new Personne();
+$aymen->sePresenter();
+//$fakeCar->tableauDeBord();
+//$fiesta->tableauDeBord();

@@ -1,11 +1,11 @@
 <?php
 
-class Voiture
+Abstract class VoitureAbstraite
 {
-    private $matricule;
-    private $nbChevaux;
-    private $couleur;
-    private $vitesse;
+    protected $matricule;
+    protected $nbChevaux;
+    protected $couleur;
+    protected $vitesse;
 
     public function __construct($matricule = 0, $nbChevaux = 0,
                                 $couleur = 'blanche', $vitesse = 100)
@@ -16,6 +16,7 @@ class Voiture
         $this->vitesse = $vitesse;
     }
 
+    abstract public function reglageMoteur();
     public function tableauDeBord()
     {
         $date = new DateTime('NOW');
