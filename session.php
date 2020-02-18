@@ -6,7 +6,6 @@ if (!isset($_SESSION['nbreVisit'])) {
     $message = "Bonjour bienvenu à notre site c'est votre première visite :)";
 } else {
     $nbreVisite =  $_SESSION['nbreVisit'] + 1; 
-
     $_SESSION['nbreVisit'] = $nbreVisite; 
     $message = "Re bonjour vous avez visité notre site ${nbreVisite} fois";
 }

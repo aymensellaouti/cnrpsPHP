@@ -12,9 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gestion des tableaux</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
 </head>
 <body>
-    <table border='2'>
+    <table class="table table-striped">
     <tr>
         <th>Caractère</th>
         <th>Nombre d'Occurences</th>
@@ -22,7 +24,9 @@
     <?php
     $chaine = "Bonjour Cnrps pour le formation PHP Symfony";
     ?>
-    <p>La chaine est : <?= $chaine ?></p>
+    <p>
+    <i class="fa fa-table fa-2x" aria-hidden="true"></i>
+    La chaine est : <?= $chaine ?></p>
     <?php
     foreach(count_chars($chaine, 1) as $caractere => $nbOcc) {
     ?>
