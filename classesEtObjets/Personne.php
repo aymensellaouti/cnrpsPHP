@@ -2,7 +2,15 @@
 Class Personne {
     private $name;
     private $numero;
-    
+    private static $nbPersonne = 0;
+    public function __construct()
+    {
+        echo 'appel du constructeur<br>';
+        self::$nbPersonne ++;
+    }
+    static function getNbreInstance() {
+        echo self::$nbPersonne. ' instances <br>';
+    }
     public function sePresenter() {
         echo "<br>Bonjour je suis ".$this->name. " et mon téléphone est ".$this->numero;
     }
