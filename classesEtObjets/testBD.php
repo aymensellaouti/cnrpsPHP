@@ -1,10 +1,11 @@
 <?php
 include 'autoload.php';
-$cnx = ConnexionBD::getInstance();
-$query = 'select * from produit';
-$response = $cnx->query($query);
-$datas = $response->fetchAll(PDO::FETCH_OBJ);
-foreach ($datas as $produit) {
-    echo $produit->designation;
+$fournisseurModel = new FournisseurModel();
+$datas = $fournisseurModel->findAll();
+foreach ($datas as $fournisseur) {
+    echo $fournisseur->name;
     echo '<br>';
 }
+
+$fournisseur = $fournisseurModel->findOneById(485);
+var_dump($fournisseur);
